@@ -41,4 +41,10 @@ class MMButton: UIButton {
         setBackgroundImage(MMTools.imageWithColor(color: noramlColor, size: bounds.size), for: .normal)
         setBackgroundImage(MMTools.imageWithColor(color: highlightColor, size: bounds.size), for: .highlighted)
     }
+    
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        self.updateButton(item)
+    }
+    
 }

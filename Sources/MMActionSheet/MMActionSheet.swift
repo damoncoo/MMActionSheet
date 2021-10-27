@@ -14,7 +14,7 @@ public class MMActionSheet: UIView {
     /// SelectionClosure
     public var selectionClosure: MMSelectionClosure?
     /// top cornerRadius
-    public var topCornerRadius: CGFloat = 0
+    public var topCornerRadius: CGFloat = 5
 
     /// Parmeters
     private var title: MMTitleItem?
@@ -118,7 +118,8 @@ public class MMActionSheet: UIView {
 
         scrollView.frame = CGRect(x: 0, y: tHeight, width: Constants.mmscreenWidth, height: height)
         actionSheetView.addSubview(scrollView)
-
+        actionSheetView.backgroundColor = actionSheetViewBackgroundColor
+        
         actionSheetHeight = tHeight + height + cancelHeight + Constants.paddng_bottom
 
         let aFrame: CGRect = CGRect(x: 0, y: Constants.mmscreenHeight, width: Constants.mmscreenWidth, height: actionSheetHeight)
@@ -252,9 +253,7 @@ extension MMActionSheet {
             UIApplication.shared.keyWindow?.addSubview(self)
         }
         
-        UIView.animate(withDuration: 0.1, animations: { [self] in
-            /// backgroundColor
-            self.actionSheetView.backgroundColor = actionSheetViewBackgroundColor
+        UIView.animate(withDuration: 0.1, animations: {
         }) { (_: Bool) in
             UIView.animate(withDuration: self.duration!) {
                 self.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.3)

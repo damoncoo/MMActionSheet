@@ -18,13 +18,13 @@ public struct MMTitleItem {
     /// textAlignment
     public var textAlignment: NSTextAlignment? = .center
     /// backgroundColor
-    public var backgroundColor: MMButtonTitleColor? = .custom(UIColor.clear)
+    public var backgroundColor: MMButtonTitleColor? = .custom(MMColor.dynamicColor(color1: MMColor.hexColor(hexString: "F2F3F5")!, color2: MMColor.hexColor(hexString: "333333")!))
 
     public init(title: String?,
                 titleColor: UIColor? = MMButtonTitleColor.default.rawValue,
                 titleFont: UIFont? = .systemFont(ofSize: 14.0),
                 textAlignment: NSTextAlignment? = .center,
-                backgroundColor: MMButtonTitleColor? = .custom(UIColor.clear)
+                backgroundColor: MMButtonTitleColor? = .custom(MMColor.dynamicColor(color1: MMColor.hexColor(hexString: "F2F3F5")!, color2: MMColor.hexColor(hexString: "333333")!))
     ) {
         self.text = title
         self.textColor = titleColor

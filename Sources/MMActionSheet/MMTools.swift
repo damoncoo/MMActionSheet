@@ -11,9 +11,9 @@ import UIKit
 public struct MMTools {
     /// Default
     public struct DefaultColor {
-        public static let backgroundColor = UIColor(red: 0.937, green: 0.937, blue: 0.941, alpha: 0.90).withAlphaComponent(0.9)
-        public static let normalColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 0.80)
-        public static let highlightColor = UIColor(red: 0.780, green: 0.733, blue: 0.745, alpha: 0.80)
+        public static let backgroundColor = MMColor.dynamicColor(color1: MMColor.hexColor(hexString: "#F2F3F5")!, color2: MMColor.hexColor(hexString: "#2B2B2B", transparency: 1)!)
+        public static let normalColor = MMColor.dynamicColor(color1: MMColor.hexColor(hexString: "#FFFFFF")!, color2: MMColor.hexColor(hexString: "#191919", transparency: 1)!)
+        public static let highlightColor = MMColor.dynamicColor(color1: MMColor.hexColor(hexString: "#F2F3F5")!, color2: MMColor.hexColor(hexString: "#333333")!)
     }
     
     static var isIphoneX: Bool {
